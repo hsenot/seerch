@@ -13,7 +13,7 @@
 			margin:10px;
 		}
 		form {
-			margin: 0;
+			margin: 10px;
 		}
 		input[type="text"] {
 			font-size:12px;
@@ -26,7 +26,14 @@
 			margin-bottom: 8px;
 		}
 		.span4 {
- 		   width: 420px;
+ 		   width: 410px;
+		}
+		.row {
+		    margin-left: 0px;
+		}
+		[class*="span"] {
+			margin-right: 10px;
+			margin-left: 0;
 		}
 
 		/* Leaflet */		
@@ -43,67 +50,85 @@
 </head>
 <body>
 	<div class="row">
-		<div class="span12">
-			<h2>Number Bvd</h2>
-			A row of metrics like number of projects, buildings with projects, most viewed, categories / types of projects, aggregated energy / CO2 saved, ... <br> Timeline / news streams: latest EE project in DB
-		</div>
-	</div>
-	<div class="row">
 		<div class="span4">
-			<h2 class="centered">Search</h2>
-		</div>
-		<div class="span4">
-			<h2 class="centered">Refine</h2>
-		</div>
-		<div class="span4">
-			<h2 class="centered">Share</h2>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="span4">
-			<div class="well" style="width: 400px;">
+			<div class="well" style="width: 392px;">
+				<h2 class="centered">Search</h2>
 				<div style="text-align: center;">
 					<form class="form-search">
-						<input type="text" class="input-xlarge search-query" placeholder="Search for building name, address, operator ...">
+						<input type="text" class="input-large search-query" placeholder="Building name, address, operator ...">
 					</form>
+				</div>
+				<div id="map" style="width: 392px; height: 392px; border: 1px;"></div>
+			</div>
+		</div>
+
+		<div class="span4">
+			<div class="well">
+				<h2 class="centered">Refine</h2>
+		
+				<div class="well">
+					We want less: filters ("all in map", categories, owner, metrics + values)
+				</div>
+				<div class="well">
+					Result list:
+					- could be building name or address
+					- building owner / operator
+					- programs? (EEX list <a href="http://eex.gov.au/business-support/programs/" target="_blank">here</a>)
+				</div>
+
+				<div class="well">
+					We want more: request a new data source for exploration
 				</div>
 			</div>
 
-			<div class="well" style="width: 400px;">
-				<div id="map" style="width: 400px; height: 400px"></div>
+		</div>
+
+		<div class="span4">
+			<div class="well">
+				<h2 class="centered">Share</h2>
+
+				<div class="well">
+					Details
+				</div>
+				<div class="well">
+					Permalink to building, projects, ...
+					Share
+					Export results to Excel / CSV
+					(Geo)RSS feed
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="row">
+		<div class="span4">
+			<div class="well">
+				<h2 class="centered">Dashboard</h2>
+				A block of metrics like number of projects, buildings with projects, most viewed, categories / types of projects, aggregated energy / CO2 saved, ...
+				Organised as the windows of a building?
 			</div>
 		</div>
 
 		<div class="span4">
 			<div class="well">
-				We want less: filters ("all in map", categories, owner, metrics + values)
-			</div>
-			<div class="well">
-				Result list:
-				- could be building name or address
-				- building owner / operator
-			</div>
+				<h2 class="centered">News</h2>
+				Timeline / news streams: latest EE project in DB, latest EE-related events (bip_au?)
+				Submit your news or event
 
-			<div class="well">
-				We want more: request a new data source for exploration
-			</div>
+				Profile: featuring an EE stakeholder (professional, vendor, researcher, ...)
 
-			<div class="well">
-				Aggregate? Order? Or should we just leave that to post-processing (export to Excel)
+				Sponsored corner: need to get some traffic here to become relevant (use of AdSense/AdWords? custom D3 TreeMap based on sponsorship?)
+				Pb with becoming sponsored is that we loose credibility as an impartial platform - other sources of revenue?
 			</div>
-
 		</div>
 
 		<div class="span4">
 			<div class="well">
-				Details
-			</div>
-			<div class="well">
-				Share
-				Export to Excel / CSV
-				(Geo)RSS feed
-				Permalink to building, projects, ...
+				<h2 class="centered">Visualisations</h2>
+				A (curated) gallery of visualisations / stories around energy efficiency
+				Especially: viz built with D3.js / Tableau Public
+				Submit your visualisation/story (embed link + description)
 			</div>
 		</div>
 
