@@ -12,9 +12,6 @@
 		body {
 			margin:10px;
 		}
-		h2 {
-			text-align: center;
-		}
 		form {
 			margin: 0;
 		}
@@ -37,18 +34,29 @@
 			font-size: 8px;
 		}
 
+		/* Misc */
+		.centered {
+			text-align: center;
+		}
+
 	</style>
 </head>
 <body>
 	<div class="row">
+		<div class="span12">
+			<h2>Number Bvd</h2>
+			A row of metrics like number of projects, buildings with projects, most viewed, categories / types of projects, aggregated energy / CO2 saved, ... <br> Timeline / news streams: latest EE project in DB
+		</div>
+	</div>
+	<div class="row">
 		<div class="span4">
-			<h2>Search</h2>
+			<h2 class="centered">Search</h2>
 		</div>
 		<div class="span4">
-			<h2>Refine</h2>
+			<h2 class="centered">Refine</h2>
 		</div>
 		<div class="span4">
-			<h2>Share</h2>
+			<h2 class="centered">Share</h2>
 		</div>
 	</div>
 
@@ -57,7 +65,7 @@
 			<div class="well" style="width: 400px;">
 				<div style="text-align: center;">
 					<form class="form-search">
-						<input type="text" class="input-xlarge search-query" placeholder="Search for building name, address, project ...">
+						<input type="text" class="input-xlarge search-query" placeholder="Search for building name, address, operator ...">
 					</form>
 				</div>
 			</div>
@@ -65,15 +73,24 @@
 			<div class="well" style="width: 400px;">
 				<div id="map" style="width: 400px; height: 400px"></div>
 			</div>
-
 		</div>
 
 		<div class="span4">
 			<div class="well">
-				Filters ("all in map", categories, owner, metrics)
+				We want less: filters ("all in map", categories, owner, metrics + values)
 			</div>
 			<div class="well">
-				Result list
+				Result list:
+				- could be building name or address
+				- building owner / operator
+			</div>
+
+			<div class="well">
+				We want more: request a new data source for exploration
+			</div>
+
+			<div class="well">
+				Aggregate? Order? Or should we just leave that to post-processing (export to Excel)
 			</div>
 
 		</div>
@@ -85,8 +102,8 @@
 			<div class="well">
 				Share
 				Export to Excel / CSV
-				RSS feed
-				Permalink
+				(Geo)RSS feed
+				Permalink to building, projects, ...
 			</div>
 		</div>
 
