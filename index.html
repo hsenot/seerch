@@ -8,16 +8,12 @@
 	<link rel="stylesheet" href="leaflet/leaflet.css" />
 	<!--[if lte IE 8]><link rel="stylesheet" href="../dist/leaflet.ie.css" /><![endif]-->
 	<style>
+		/* Base HTML */
 		body {
 			margin:10px;
 		}
-		.leaflet-container .leaflet-control-attribution {
-			font-size: 8px;
-		}
-		.well {
-			border-radius: 8px 8px 8px 8px;
-			padding: 8px;
-			margin-bottom: 8px;
+		h2 {
+			text-align: center;
 		}
 		form {
 			margin: 0;
@@ -25,19 +21,75 @@
 		input[type="text"] {
 			font-size:12px;
 		}
+
+		/* Bootstrap */
+		.well {
+			border-radius: 8px 8px 8px 8px;
+			padding: 8px;
+			margin-bottom: 8px;
+		}
+		.span4 {
+ 		   width: 420px;
+		}
+
+		/* Leaflet */		
+		.leaflet-container .leaflet-control-attribution {
+			font-size: 8px;
+		}
+
 	</style>
 </head>
 <body>
-	<div class="well" style="width: 400px;">
-		<div style="text-align: center;">
-			<form class="form-search">
-				<input type="text" class="input-xlarge search-query" placeholder="Search for building name, address, projects ...">
-			</form>
+	<div class="row">
+		<div class="span4">
+			<h2>Search</h2>
+		</div>
+		<div class="span4">
+			<h2>Refine</h2>
+		</div>
+		<div class="span4">
+			<h2>Share</h2>
 		</div>
 	</div>
 
-	<div class="well" style="width: 400px;">
-		<div id="map" style="width: 400px; height: 400px"></div>
+	<div class="row">
+		<div class="span4">
+			<div class="well" style="width: 400px;">
+				<div style="text-align: center;">
+					<form class="form-search">
+						<input type="text" class="input-xlarge search-query" placeholder="Search for building name, address, project ...">
+					</form>
+				</div>
+			</div>
+
+			<div class="well" style="width: 400px;">
+				<div id="map" style="width: 400px; height: 400px"></div>
+			</div>
+
+		</div>
+
+		<div class="span4">
+			<div class="well">
+				Filters ("all in map", categories, owner, metrics)
+			</div>
+			<div class="well">
+				Result list
+			</div>
+
+		</div>
+
+		<div class="span4">
+			<div class="well">
+				Details
+			</div>
+			<div class="well">
+				Share
+				Export to Excel / CSV
+				RSS feed
+				Permalink
+			</div>
+		</div>
+
 	</div>
 
     <script src="http://code.jquery.com/jquery.js"></script>
